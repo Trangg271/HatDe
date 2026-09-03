@@ -1,0 +1,43 @@
+@model HatDe.Models.Chapter
+
+@{
+    ViewData["Title"] = Model.Title;
+    var story = ViewBag.Story as HatDe.Models.Story;
+}
+
+<div class="container mt-4" style="max-width: 800px;">
+    <!-- Thanh điều hướng phía trên -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <a href="/Story/Detail/@Model.StoryId" class="btn btn-outline-secondary btn-sm">&larr; Quay lại trang truyện</a>
+        <span class="text-muted">Ví của bạn: <strong class="text-danger">@ViewBag.UserBalance 🌰 Hạt Dẻ</strong></span>
+    </div>
+
+    <div class="card shadow-sm border-0 p-4 bg-white">
+        <h6 class="text-muted text-center text-uppercase">@(story?.Title)</h6>
+        <h2 class="text-center fw-bold mb-4 text-dark">@Model.Title</h2>
+        
+        <hr class="mb-4" />
+
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger">@TempData["Error"]</div>
+        }
+
+        <!-- Nội dung chương truyện -->
+        <div class="chapter-content fs-5" style="line-height: 1.9; white-space: pre-line; color: #2c3e50; font-family: Georgia, serif;">
+            @Model.Content
+        </div>
+
+        <!-- Tích hợp Affiliate Link cuối chương -->
+        @if (story != null && !string.IsNullOrEmpty(story.AffiliateLink))
+        {
+            <div class="card mt-5 border-0 bg-light shadow-sm">
+                <div class="card-body text-center py-4">
+                    <h5 class="fw-bold text-dark">🛒 Sản Phẩm Tài Trợ Liên Quan</h5>
+                    <p class="text-muted small mb-3">Khám phá các sản phẩm ưu đãi độc quyền từ đối tác để ủng hộ tác giả duy trì ngòi bút!</p>
+                    <a href="@story.AffiliateLink" target="_blank" class="btn btn-warning fw-bold px-4">Xem chi tiết sản phẩm</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,46 @@
+@model HatDe.Models.Chapter
+
+@{
+    ViewData["Title"] = "Thêm Chương Mới";
+}
+
+<div class="container mt-4" style="max-width: 700px;">
+    <div class="card shadow-sm">
+        <div class="card-body p-4">
+            <h3 class="fw-bold text-primary mb-3">✍️ Thêm Chương Cho: @ViewBag.StoryTitle</h3>
+            
+            <form asp-action="Add" method="post">
+                <input type="hidden" asp-for="StoryId" />
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Tiêu đề chương</label>
+                    <input asp-for="Title" class="form-control" required placeholder="Ví dụ: Chương 1: Khởi đầu..." />
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-bold">Loại chương</label>
+                        <select asp-for="IsVip" class="form-select" id="vipSelect">
+                            <option value="false">Chương Miễn Phí</option>
+                            <option value="true">Chương VIP (Mất phí)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-bold">Giá mở khóa (Hạt dẻ)</label>
+                        <input asp-for="PriceInHatDe" class="form-control" type="number" value="0" min="0" />
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Nội dung chương</label>
+                    <textarea asp-for="Content" class="form-control" rows="10" required placeholder="Dán nội dung văn bản truyện vào đây..."></textarea>
+                </div>
+                
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-success px-4 fw-bold">Lưu Chương</button>
+                    <a href="/Story/Detail/@Model.StoryId" class="btn btn-light ms-2 border">Hủy bỏ</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

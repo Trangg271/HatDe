@@ -1,0 +1,42 @@
+﻿@model IEnumerable<HatDe.Models.Story>
+
+@{
+    ViewData["Title"] = "Trang Chủ";
+}
+
+<div class="story-container">
+    <h2>Truyện Mới Cập Nhật</h2>
+    
+    <div class="story-grid">
+        @if (Model != null && Model.Any())
+        {
+            foreach (var story in Model)
+            {
+                <div class="story-card">
+                    <!-- Ảnh bìa truyện -->
+                    <img src="@story.CoverImageUrl" alt="@story.Title" class="story-cover" />
+                    
+                    <div class="story-info">
+                        <h3>@story.Title</h3>
+                        <p class="author">Tác giả: @story.Author</p>
+                        
+                        <!-- Nút đọc truyện -->
+                        <a href="/Story/Detail/@story.Id" class="btn-read">Đọc ngay</a>
+
+                        <form asp-controller="Admin" asp-action="DeleteStory" method="post" class="d-inline">
+                            <input type="hidden" name="id" value="@story.Id" />
+                            <button type="submit" class="btn btn-outline-danger btn-sm"
+                                    onclick="return confirm('Bạn có chắc muốn xóa truyện này không?');">
+                                Xóa truyện
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p>Hiện chưa có bộ truyện nào.</p>
+        }
+    </div>
+</div>

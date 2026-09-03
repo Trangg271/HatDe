@@ -1,0 +1,43 @@
+@model HatDe.Models.Story
+
+@{
+    ViewData["Title"] = "Đăng Truyện";
+}
+
+<h1>Đăng Truyện</h1>
+
+<form asp-action="CreateStory" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label">Tên truyện</label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Author" class="form-label">Tác giả</label>
+        <input asp-for="Author" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label">Mô tả</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="CoverImageUrl" class="form-label">URL ảnh bìa</label>
+        <input asp-for="CoverImageUrl" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="AffiliateLink" class="form-label">Link liên kết</label>
+        <input asp-for="AffiliateLink" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Lưu truyện</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
