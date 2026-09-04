@@ -136,7 +136,6 @@ C:\Users\Admin\OneDrive\Máy tính\Hạt dẻ comic\HatDe\obj\Debug\net10.0\rjsm
 C:\Users\Admin\OneDrive\Máy tính\Hạt dẻ comic\HatDe\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Admin\OneDrive\Máy tính\Hạt dẻ comic\HatDe\obj\Debug\net10.0\scopedcss\bundle\HatDe.styles.css
 C:\Users\Admin\OneDrive\Máy tính\Hạt dẻ comic\HatDe\obj\Debug\net10.0\scopedcss\projectbundle\HatDe.bundle.scp.css
-C:\Users\Admin\OneDrive\Máy tính\Hạt dẻ comic\HatDe\obj\Debug\net10.0\compressed\7culemwbq8-{0}-orhdc8hsmi-orhdc8hsmi.gz
 C:\Users\Admin\OneDrive\Máy tính\Hạt dẻ comic\HatDe\obj\Debug\net10.0\compressed\2y2qwsjmk9-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\Admin\OneDrive\Máy tính\Hạt dẻ comic\HatDe\obj\Debug\net10.0\compressed\mnuaud94ze-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\Admin\OneDrive\Máy tính\Hạt dẻ comic\HatDe\obj\Debug\net10.0\compressed\p958kmd47a-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -227,3 +226,77 @@ C:\Users\Admin\AppData\Local\Temp\HatDe-delete-verify\HatDe.deps.json
 C:\Users\Admin\AppData\Local\Temp\HatDe-delete-verify\HatDe.runtimeconfig.json
 C:\Users\Admin\AppData\Local\Temp\HatDe-delete-verify\HatDe.dll
 C:\Users\Admin\AppData\Local\Temp\HatDe-delete-verify\HatDe.pdb
+C:\Users\Admin\AppData\Local\Temp\HatDe-ui-verify\appsettings.Development.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-ui-verify\appsettings.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-ui-verify\HatDe.staticwebassets.runtime.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-ui-verify\HatDe.staticwebassets.endpoints.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-ui-verify\HatDe.deps.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-ui-verify\HatDe.runtimeconfig.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-ui-verify\HatDe.dll
+C:\Users\Admin\AppData\Local\Temp\HatDe-ui-verify\HatDe.pdb
+C:\Users\Admin\OneDrive\Máy tính\Hạt dẻ comic\HatDe\obj\Debug\net10.0\HatDe.sourcelink.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-ui-final\appsettings.Development.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-ui-final\appsettings.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-ui-final\HatDe.staticwebassets.runtime.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-ui-final\HatDe.staticwebassets.endpoints.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-ui-final\HatDe.deps.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-ui-final\HatDe.runtimeconfig.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-ui-final\HatDe.dll
+C:\Users\Admin\AppData\Local\Temp\HatDe-ui-final\HatDe.pdb
+C:\Users\Admin\AppData\Local\Temp\HatDe-register-verify\appsettings.Development.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-register-verify\appsettings.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-register-verify\HatDe.staticwebassets.runtime.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-register-verify\HatDe.staticwebassets.endpoints.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-register-verify\HatDe.deps.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-register-verify\HatDe.runtimeconfig.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-register-verify\HatDe.dll
+C:\Users\Admin\AppData\Local\Temp\HatDe-register-verify\HatDe.pdb
+C:\Users\Admin\AppData\Local\Temp\HatDe-login-verify\appsettings.Development.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-login-verify\appsettings.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-login-verify\HatDe.staticwebassets.runtime.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-login-verify\HatDe.staticwebassets.endpoints.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-login-verify\HatDe.deps.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-login-verify\HatDe.runtimeconfig.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-login-verify\HatDe.dll
+C:\Users\Admin\AppData\Local\Temp\HatDe-login-verify\HatDe.pdb
+C:\Users\Admin\AppData\Local\Temp\HatDe-login-final\appsettings.Development.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-login-final\appsettings.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-login-final\HatDe.staticwebassets.runtime.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-login-final\HatDe.staticwebassets.endpoints.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-login-final\HatDe.deps.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-login-final\HatDe.runtimeconfig.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-login-final\HatDe.dll
+C:\Users\Admin\AppData\Local\Temp\HatDe-login-final\HatDe.pdb
+C:\Users\Admin\AppData\Local\Temp\HatDe-guest-ui-verify\appsettings.Development.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-guest-ui-verify\appsettings.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-guest-ui-verify\HatDe.staticwebassets.runtime.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-guest-ui-verify\HatDe.staticwebassets.endpoints.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-guest-ui-verify\HatDe.deps.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-guest-ui-verify\HatDe.runtimeconfig.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-guest-ui-verify\HatDe.dll
+C:\Users\Admin\AppData\Local\Temp\HatDe-guest-ui-verify\HatDe.pdb
+C:\Users\Admin\AppData\Local\Temp\HatDe-guest-final\appsettings.Development.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-guest-final\appsettings.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-guest-final\HatDe.staticwebassets.runtime.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-guest-final\HatDe.staticwebassets.endpoints.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-guest-final\HatDe.deps.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-guest-final\HatDe.runtimeconfig.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-guest-final\HatDe.dll
+C:\Users\Admin\AppData\Local\Temp\HatDe-guest-final\HatDe.pdb
+C:\Users\Admin\AppData\Local\Temp\HatDe-role-verify\appsettings.Development.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-role-verify\appsettings.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-role-verify\HatDe.staticwebassets.runtime.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-role-verify\HatDe.staticwebassets.endpoints.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-role-verify\HatDe.deps.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-role-verify\HatDe.runtimeconfig.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-role-verify\HatDe.dll
+C:\Users\Admin\AppData\Local\Temp\HatDe-role-verify\HatDe.pdb
+C:\Users\Admin\AppData\Local\Temp\HatDe-dashboard-verify\appsettings.Development.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-dashboard-verify\appsettings.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-dashboard-verify\HatDe.staticwebassets.runtime.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-dashboard-verify\HatDe.staticwebassets.endpoints.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-dashboard-verify\HatDe.deps.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-dashboard-verify\HatDe.runtimeconfig.json
+C:\Users\Admin\AppData\Local\Temp\HatDe-dashboard-verify\HatDe.dll
+C:\Users\Admin\AppData\Local\Temp\HatDe-dashboard-verify\HatDe.pdb
+C:\Users\Admin\OneDrive\Máy tính\Hạt dẻ comic\HatDe\obj\Debug\net10.0\compressed\7culemwbq8-{0}-ie6ie20igf-ie6ie20igf.gz

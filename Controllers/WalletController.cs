@@ -1,9 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using HatDe.Models;
 using System.Linq;
+using System.Security.Claims;
 
 namespace HatDe.Controllers
 {
+    [Authorize]
     public class WalletController : Controller
     {
         private readonly AppDbContext _context;
@@ -15,14 +18,11 @@ namespace HatDe.Controllers
 
         public IActionResult Index()
         {
-            int currentUserId = 1;
+            int currentUserId = GetCurrentUserId();
             var user = _context.Users.Find(currentUserId);
-            
             if (user == null)
             {
-                user = new User { Id = 1, Username = "DocGiaHatDe", HatDeBalance = 100 };
-                _context.Users.Add(user);
-                _context.SaveChanges();
+                return RedirectToAction("Login", "Account", new { returnUrl = "/Wallet" });
             }
 
             return View(user);
@@ -37,7 +37,7 @@ namespace HatDe.Controllers
                 return RedirectToAction("Index");
             }
 
-            int currentUserId = 1;
+            int currentUserId = GetCurrentUserId();
             var user = _context.Users.Find(currentUserId);
             
             if (user != null)
@@ -69,7 +69,7 @@ namespace HatDe.Controllers
                 return RedirectToAction("Index");
             }
 
-            int currentUserId = 1;
+            int currentUserId = GetCurrentUserId();
             var user = _context.Users.Find(currentUserId);
 
             if (user != null)
@@ -83,6 +83,11 @@ namespace HatDe.Controllers
             }
 
             return RedirectToAction("Index");
+        }
+
+        private int GetCurrentUserId()
+        {
+            return int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var userId) ? userId : 0;
         }
     }
 }

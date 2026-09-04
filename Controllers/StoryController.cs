@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using HatDe.Models;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
 namespace HatDe.Controllers
 {
+    [Authorize]
     public class StoryController : Controller
     {
         private readonly AppDbContext _context;

@@ -1,0 +1,54 @@
+@model HatDe.Models.AdminDashboardViewModel
+
+@{
+    ViewData["Title"] = "Bảng điều khiển Admin";
+}
+
+<div class="admin-dashboard">
+    <div class="dashboard-heading">
+        <div>
+            <p class="account-kicker">KHOANG CÂY CỦA NGƯỜI GIỮ RỪNG</p>
+            <h1>Bảng điều khiển</h1>
+            <p>Theo dõi nhịp sống của khu rừng Hạt Dẻ.</p>
+        </div>
+        <span class="dashboard-mascot" aria-hidden="true">🐿</span>
+    </div>
+
+    <div class="dashboard-grid">
+        <div class="stat-card stat-card-primary">
+            <span class="stat-icon" aria-hidden="true">👣</span>
+            <span class="stat-label">Tổng lượt truy cập</span>
+            <strong>@Model.TotalVisits</strong>
+            <small>mọi lần mở trang chủ</small>
+        </div>
+        <div class="stat-card">
+            <span class="stat-icon" aria-hidden="true">🌤</span>
+            <span class="stat-label">Lượt truy cập hôm nay</span>
+            <strong>@Model.TodayVisits</strong>
+            <small>tính theo giờ UTC</small>
+        </div>
+        <div class="stat-card">
+            <span class="stat-icon" aria-hidden="true">🐿</span>
+            <span class="stat-label">Tài khoản</span>
+            <strong>@Model.TotalUsers</strong>
+            <small>người đọc trong rừng</small>
+        </div>
+        <div class="stat-card">
+            <span class="stat-icon" aria-hidden="true">📚</span>
+            <span class="stat-label">Truyện / chương</span>
+            <strong>@Model.TotalStories <span>/ @Model.TotalChapters</span></strong>
+            <small>kho nội dung hiện có</small>
+        </div>
+        <div class="stat-card">
+            <span class="stat-icon" aria-hidden="true">🌰</span>
+            <span class="stat-label">Code còn hiệu lực</span>
+            <strong>@Model.ActiveGiftCodes</strong>
+            <small>quà tặng chưa đổi</small>
+        </div>
+    </div>
+
+    <div class="dashboard-actions">
+        <a asp-controller="Admin" asp-action="ManageGiftCodes" class="btn btn-primary">Quản lý Giftcode</a>
+        <a asp-controller="Admin" asp-action="CreateStory" class="btn btn-outline-primary">Đăng truyện mới</a>
+    </div>
+</div>

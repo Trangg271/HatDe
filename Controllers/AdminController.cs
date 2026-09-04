@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using HatDe.Models;
 using System.Linq;
 
 namespace HatDe.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private readonly AppDbContext _context;
@@ -11,6 +13,24 @@ namespace HatDe.Controllers
         public AdminController(AppDbContext context)
         {
             _context = context;
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public IActionResult Dashboard()
+        {
+            var today = DateTime.UtcNow.Date;
+            var model = new AdminDashboardViewModel
+            {
+                TotalVisits = _context.VisitLogs.Count(),
+                TodayVisits = _context.VisitLogs.Count(visit => visit.VisitedAt >= today),
+                TotalUsers = _context.Users.Count(),
+                TotalStories = _context.Stories.Count(),
+                TotalChapters = _context.Chapters.Count(),
+                ActiveGiftCodes = _context.GiftCodes.Count(code => !code.IsUsed)
+            };
+
+            return View(model);
         }
 
         // 1. Gửi form trống ra màn hình cho bạn nhập
@@ -51,6 +71,7 @@ namespace HatDe.Controllers
 
         // 3. Hiển thị danh sách Giftcode và form tạo mã mới
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult ManageGiftCodes()
         {
             var codes = _context.GiftCodes.OrderByDescending(g => g.Id).ToList();
@@ -59,6 +80,8 @@ namespace HatDe.Controllers
 
         // 4. Xử lý tạo Giftcode mới
         [HttpPost]
+        [Authorize(Roles = "Admin")]
+        [ValidateAntiForgeryToken]
         public IActionResult CreateGiftCode(string code, int rewardAmount)
         {
             if (string.IsNullOrWhiteSpace(code) || rewardAmount <= 0)

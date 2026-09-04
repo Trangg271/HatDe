@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HatDe")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+921c12e45482e9baae913bfb97ea09ac1f82e3fe")]
 [assembly: System.Reflection.AssemblyProductAttribute("HatDe")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HatDe")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

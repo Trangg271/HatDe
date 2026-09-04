@@ -5,9 +5,28 @@
 }
 
 <div class="story-container">
-    <h2>Truyện Mới Cập Nhật</h2>
-    
-    <div class="story-grid">
+    @if (User.Identity?.IsAuthenticated != true)
+    {
+        <section class="platform-intro">
+            <div class="intro-mascot" aria-hidden="true">🐿</div>
+            <p class="account-kicker">KHU RỪNG HẠT DẺ</p>
+            <h1>Những câu chuyện được cất giữ thật dịu dàng.</h1>
+            <p>Nền tảng đọc truyện cá nhân hóa, nơi mỗi chương truyện là một hạt dẻ nhỏ dành riêng cho hành trình của bạn.</p>
+            <div class="intro-actions">
+                <a asp-controller="Account" asp-action="Login" class="btn btn-primary">Đăng nhập</a>
+                <a asp-controller="Account" asp-action="Register" class="btn btn-outline-primary">Đăng ký</a>
+            </div>
+        </section>
+    }
+    else
+    {
+        <div class="welcome-note">
+            <span aria-hidden="true">🐿</span>
+            <p>Nơi chú sóc cất giữ những chương truyện ấm áp dưới tán cây hạt dẻ.</p>
+        </div>
+        <h2>Truyện Mới Cập Nhật</h2>
+
+        <div class="story-grid">
         @if (Model != null && Model.Any())
         {
             foreach (var story in Model)
@@ -38,5 +57,6 @@
         {
             <p>Hiện chưa có bộ truyện nào.</p>
         }
-    </div>
+        </div>
+    }
 </div>

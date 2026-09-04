@@ -16,6 +16,9 @@ namespace HatDe.Controllers
 
         public IActionResult Index()
         {
+            _context.VisitLogs.Add(new VisitLog { VisitedAt = DateTime.UtcNow });
+            _context.SaveChanges();
+
             // Lấy toàn bộ danh sách truyện từ Database và truyền ra View
             var stories = _context.Stories.ToList();
             return View(stories);

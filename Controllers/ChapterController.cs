@@ -1,10 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using HatDe.Models;
 using System.Linq;
 using System;
+using System.Security.Claims;
 
 namespace HatDe.Controllers
 {
+    [Authorize]
     public class ChapterController : Controller
     {
         private readonly AppDbContext _context;
@@ -46,15 +49,11 @@ namespace HatDe.Controllers
             var story = _context.Stories.Find(chapter.StoryId);
             ViewBag.Story = story;
 
-            // Tạm thời gán mặc định UserId = 1 để test hệ thống ví Hạt dẻ
-            int currentUserId = 1; 
+            int currentUserId = GetCurrentUserId();
             var user = _context.Users.Find(currentUserId);
             if (user == null)
             {
-                // Nếu chưa có user trong DB, tự động tạo tài khoản mẫu có sẵn 100 Hạt dẻ
-                user = new User { Id = 1, Username = "DocGiaHatDe", HatDeBalance = 100 };
-                _context.Users.Add(user);
-                _context.SaveChanges();
+                return RedirectToAction("Login", "Account", new { returnUrl = $"/Chapter/Read/{id}" });
             }
 
             ViewBag.UserBalance = user.HatDeBalance;
@@ -82,7 +81,7 @@ namespace HatDe.Controllers
         [HttpPost]
         public IActionResult Unlock(int chapterId)
         {
-            int currentUserId = 1;
+            int currentUserId = GetCurrentUserId();
             var user = _context.Users.Find(currentUserId);
             var chapter = _context.Chapters.Find(chapterId);
 
@@ -109,6 +108,11 @@ namespace HatDe.Controllers
             // Nếu không đủ tiền
             TempData["Error"] = "Số dư Hạt dẻ không đủ để mở khóa chương này!";
             return RedirectToAction("Read", new { id = chapterId });
+        }
+
+        private int GetCurrentUserId()
+        {
+            return int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var userId) ? userId : 0;
         }
     }
 }

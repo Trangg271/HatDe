@@ -11,5 +11,6 @@ namespace HatDe.Models
         public DbSet<Chapter> Chapters { get; set; }
         public DbSet<UnlockedChapter> UnlockedChapters { get; set; }
         public DbSet<GiftCode> GiftCodes { get; set; }
+        public DbSet<VisitLog> VisitLogs { get; set; }
     }
 }
